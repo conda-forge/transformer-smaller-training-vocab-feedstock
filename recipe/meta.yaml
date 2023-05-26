@@ -1,5 +1,5 @@
 {% set name = "transformer-smaller-training-vocab" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/transformer_smaller_training_vocab-{{ version }}.tar.gz
-  sha256: c8b7ce2b23c3aef5e289ea91a66ebf707d612875d70e2439085a7381c1655528
+  sha256: 48a27e00440744bc5cd96f3253f81f687070aaa279baf10baae495bd5772ecbb
 
 build:
   noarch: python
