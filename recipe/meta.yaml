@@ -1,5 +1,5 @@
 {% set name = "transformer-smaller-training-vocab" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/transformer_smaller_training_vocab-{{ version }}.tar.gz
-  sha256: 48a27e00440744bc5cd96f3253f81f687070aaa279baf10baae495bd5772ecbb
+  sha256: 677b22ef204af1d51d333b0db1222355048bf40cf710a4e4c7008604141f65d8
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - datasets >=2.0.0,<3.0.0
     - transformers >=4.1.0,<5.0.0
-    - pytorch >=1.8.0,<3.0.0
+    - pytorch >=1.8.0<3.0.0,!=2.0.1
     - sentencepiece >=0.1.97,<0.2.0
 
 test:
