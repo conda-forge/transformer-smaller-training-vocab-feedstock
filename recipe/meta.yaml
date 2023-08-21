@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - datasets >=2.0.0,<3.0.0
     - transformers >=4.1.0,<5.0.0
-    - pytorch >=1.8.0<3.0.0,!=2.0.1
+    - pytorch >=1.8.0,<3.0.0,!=2.0.1
     - sentencepiece >=0.1.97,<0.2.0
 
 test:
