@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/transformer_smaller_training_vocab-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/transformer_smaller_training_vocab-{{ version }}.tar.gz
   sha256: d7360ac084786f66f99ef16d621f34acbb0dce6d9a624525d1f7dc8b6c3a49f7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - transformers >=4.1.0,<5.0.0
     - pytorch >=1.8.0,<3.0.0,!=2.0.1
     - sentencepiece >=0.1.97,<0.2.0
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/helpmefindaname/transformer-smaller-training-vocab
